@@ -67,7 +67,7 @@ fi
 if [[ -n "$RUNTIME_BIN" && -f "$RUNTIME_BIN" ]]; then
   SQFS_TMP="$(mktemp /tmp/vixglitcher-XXXXXX.sqfs)"
   rm -f "$SQFS_TMP"
-  "$MKSQUASHFS_BIN" "$APPDIR" "$SQFS_TMP" -root-owned -noappend -comp zstd -Xcompression-level 19 -no-progress >/dev/null
+  "$MKSQUASHFS_BIN" "$APPDIR" "$SQFS_TMP" -all-root -noappend -comp gzip -no-progress >/dev/null
   cat "$RUNTIME_BIN" "$SQFS_TMP" > "$OUTPUT"
   chmod +x "$OUTPUT"
   rm -f "$SQFS_TMP"

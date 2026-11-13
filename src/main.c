@@ -192,13 +192,13 @@ int main(int argc, char **argv) {
     }
 
     /* Hints for native Arch Linux Wayland (Hyprland/KDE/GNOME/Sway) & X11 */
-    SDL_SetHint(SDL_HINT_APP_NAME, "VIXGlitcher");
+    SDL_SetHint("SDL_APP_NAME", "VIXGlitcher");
     SDL_SetHint("SDL_VIDEO_X11_WMCLASS", "vixglitcher");
-    SDL_SetHint(SDL_HINT_VIDEO_X11_NET_WM_BYPASS_COMPOSITOR, "0");
+    SDL_SetHint("SDL_VIDEO_X11_NET_WM_BYPASS_COMPOSITOR", "0");
 
     /* Prefer Wayland automatically on pure Wayland sessions if DISPLAY is unset */
     if (!getenv("SDL_VIDEODRIVER") && getenv("WAYLAND_DISPLAY") && !getenv("DISPLAY")) {
-        SDL_SetHint(SDL_HINT_VIDEODRIVER, "wayland,x11");
+        SDL_SetHint("SDL_VIDEODRIVER", "wayland,x11");
     }
 
     if (SDL_Init(SDL_INIT_VIDEO | SDL_INIT_TIMER | SDL_INIT_EVENTS) != 0) {
