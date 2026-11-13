@@ -67,7 +67,7 @@ fi
 if [[ -n "$RUNTIME_BIN" && -f "$RUNTIME_BIN" ]]; then
   SQFS_TMP="$(mktemp /tmp/vixglitcher-XXXXXX.sqfs)"
   rm -f "$SQFS_TMP"
-  "$MKSQUASHFS_BIN" "$APPDIR" "$SQFS_TMP" -root-owned -noappend -comp zstd -Xcompression-level 19 -quiet
+  "$MKSQUASHFS_BIN" "$APPDIR" "$SQFS_TMP" -root-owned -noappend -comp zstd -Xcompression-level 19 -no-progress >/dev/null
   cat "$RUNTIME_BIN" "$SQFS_TMP" > "$OUTPUT"
   chmod +x "$OUTPUT"
   rm -f "$SQFS_TMP"
@@ -79,6 +79,7 @@ else
 fi
 
 (cd "$(dirname "$OUTPUT")" && sha256sum "$(basename "$OUTPUT")" > "$(basename "$OUTPUT").sha256")
+rm -rf "$APPDIR"
 
 echo "==> [4/4] Verifying AppImage..."
 ls -lh "$OUTPUT" "${OUTPUT}.sha256"
