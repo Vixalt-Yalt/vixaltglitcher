@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+  <id>io.github.vixalt.vixglitcher</id>
+  <metadata_license>MIT</metadata_license>
+  <project_license>MIT</project_license>
+  <name>VIXGlitcher</name>
+  <summary>Dark Neon Lilac mpv Video Player for Arch Linux</summary>
+  <summary xml:lang="ru">Видеоплеер на базе mpv в стилистике тёмного неонового сиреневого</summary>
+  <description>
+    <p>
+      VIXGlitcher is a fast, native video player built for Arch Linux (Wayland and X11),
+      powered by libmpv under the hood with a pure pitch-black viewport and a custom
+      Dark Neon Lilac GPU interface.
+    </p>
+  </description>
+  <launchable type="desktop-id">vixglitcher.desktop</launchable>
+  <url type="homepage">https://github.com/Vixalt-Yalt/vixaltglitcher</url>
+  <url type="vcs-browser">https://github.com/Vixalt-Yalt/vixaltglitcher</url>
+  <developer id="io.github.vixalt">
+    <name>Vixalt</name>
+  </developer>
+  <provides>
+    <binary>vixglitcher</binary>
+  </provides>
+  <content_rating type="oars-1.1" />
+  <releases>
+    <release version="1.0.0" date="2026-11-13">
+      <description>
+        <p>Initial release of VIXGlitcher for Arch Linux (x86_64 AppImage and source).</p>
+      </description>
+    </release>
+  </releases>
+</component>
