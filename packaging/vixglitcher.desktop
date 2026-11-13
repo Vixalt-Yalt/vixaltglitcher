@@ -1,0 +1,20 @@
+[Desktop Entry]
+Type=Application
+Version=1.0
+Name=VIXGlitcher
+GenericName=Video Player
+GenericName[ru]=Видеоплеер
+Comment=Dark Neon Lilac mpv Video Player for Arch Linux
+Comment[ru]=Видеоплеер на базе mpv в стилистике тёмного неонового сиреневого
+Exec=vixglitcher %U
+TryExec=vixglitcher
+Icon=vixglitcher
+Terminal=false
+Categories=AudioVideo;Video;Player;
+Keywords=mpv;video;player;media;neon;glitch;arch;
+MimeType=video/mp4;video/x-matroska;video/webm;video/x-msvideo;video/quicktime;video/mp2t;audio/mpeg;audio/flac;audio/ogg;audio/opus;
+StartupNotify=true
+StartupWMClass=vixglitcher
+X-AppImage-Name=VIXGlitcher
+X-AppImage-Version=1.0.0
+X-AppImage-Arch=x86_64
